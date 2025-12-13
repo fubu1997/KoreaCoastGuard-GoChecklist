@@ -1,3 +1,13 @@
+// 사용자 화면 표준 유형 순서 (고정)
+const TYPE_ORDER = [
+  "수색",
+  "구조",
+  "단속",
+  "경비",
+  "사고 대응",
+  "해양 오염"
+];
+
 const LS_PREVIEW_PREFIX = "cg_preview_org_"; // + orgId
 const $ = (id) => document.getElementById(id);
 
