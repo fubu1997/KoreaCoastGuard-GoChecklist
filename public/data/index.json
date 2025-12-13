@@ -1,0 +1,17 @@
+{
+  "orgs": [
+    { "id": "dept-bieung", "name": "비응파출소", "orgType": "부서", "file": "latest-dept-bieung.json" },
+    { "id": "dept-haemang", "name": "해망파출소", "orgType": "부서", "file": "latest-dept-haemang.json" },
+    { "id": "dept-saemangeum", "name": "새만금파출소", "orgType": "부서", "file": "latest-dept-saemangeum.json" },
+
+    { "id": "p-67", "name": "P-67", "orgType": "P정", "file": "latest-p-67.json" },
+    { "id": "p-69", "name": "P-69", "orgType": "P정", "file": "latest-p-69.json" },
+    { "id": "p-91", "name": "P-91", "orgType": "P정", "file": "latest-p-91.json" },
+
+    { "id": "ship-321", "name": "321함", "orgType": "함정", "file": "latest-ship-321.json" },
+    { "id": "ship-322", "name": "322함", "orgType": "함정", "file": "latest-ship-322.json" },
+    { "id": "ship-1001", "name": "1001함", "orgType": "함정", "file": "latest-ship-1001.json" },
+    { "id": "ship-3010", "name": "3010함", "orgType": "함정", "file": "latest-ship-3010.json" },
+    { "id": "ship-3013", "name": "3013함", "orgType": "함정", "file": "latest-ship-3013.json" }
+  ]
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>해양경찰 출동 체크리스트</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="site-header">
+  <div class="header-inner">
+    <img src="./assets/kcg-logo.png" alt="해양경찰청" class="kcg-logo" />
+    <div class="header-text">
+      <h1>해양경찰 출동 장비 체크리스트</h1>
+      <p>출동 유형 · 상황별 필수 장비 확인</p>
+    </div>
+  </div>
+</header>
+
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>출동 장비·물품 체크리스트</h1>
+          <p class="muted">조직별 템플릿 · 유형 → 상황 → 체크리스트</p>
+        </div>
+      </div>
+      <div class="top-actions">
+        <button id="btnReload">데이터 다시 불러오기</button>
+        <a class="link-btn" href="../admin/admin.html">관리자</a>
+      </div>
+    </header>
+
+    <div class="grid cols">
+      <section class="card">
+        <h2>조직 선택</h2>
+        <div class="mb-10">
+          <select id="orgSelect" class="select"></select>
+        </div>
+        <p class="hint" id="orgDesc">조직별로 체크리스트가 다르게 적용됩니다.</p>
+
+        <div class="divider"></div>
+
+        <h2>유형</h2>
+        <div class="types" id="typeButtons"></div>
+
+        <div class="divider"></div>
+
+        <h2>상황</h2>
+        <div class="types" id="caseButtons"></div>
+
+        <div class="divider"></div>
+
+        <div class="row">
+          <span class="pill" id="versionPill">버전: <b>-</b></span>
+          <span class="pill" id="uncheckedPill">미체크: <b>-</b></span>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="row space">
+          <div>
+            <h2 class="no-margin" id="title">체크리스트</h2>
+            <div class="muted" id="subtitle">조직 → 유형 → 상황 선택</div>
+          </div>
+          <span class="pill">시간: <b id="nowTime">-</b></span>
+        </div>
+
+        <div class="divider"></div>
+
+        <div id="checkView" style="display:none;">
+          <div class="row mb-10">
+            <button id="btnCheckAll" class="ok">전체 체크</button>
+            <button id="btnUncheckAll">전체 해제</button>
+            <button id="btnSaveLocal" class="primary">체크 상태 저장(로컬)</button>
+          </div>
+
+          <div class="search mb-10">
+            <input id="searchInput" type="text" placeholder="항목 검색" />
+          </div>
+
+          <div class="mb-10">
+            <label class="muted" for="memo">메모(선택)</label>
+            <textarea id="memo" placeholder="예) 야간/파고/추가 배터리"></textarea>
+          </div>
+
+          <div class="divider"></div>
+          <div id="categoryContainer" class="grid gap-10"></div>
+        </div>
+
+        <div id="emptyView" class="hint">
+          왼쪽에서 <b>조직</b> → <b>유형</b> → <b>상황</b> 순으로 선택
+        </div>
+      </section>
+    </div>
+  </div>
+
+<footer class="site-footer">
+  <p>
+    © 2025 Korea Coast Guard. Internal Demonstration Purpose Only.
+  </p>
+</footer>
+
+
+  <div class="toast" id="toast"></div>
+  <script src="./script.js"></script>
+</body>
+</html>

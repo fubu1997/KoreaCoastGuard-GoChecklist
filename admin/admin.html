@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>조직 관리자 - 체크리스트</title>
+  <link rel="stylesheet" href="./admin.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>조직 관리자 콘솔</h1>
+          <p class="muted">유형 → 상황 → 카테고리 → 항목(여러 줄 입력)</p>
+        </div>
+      </div>
+      <div class="top-actions">
+        <a class="link-btn" href="../public/index.html">사용자 화면</a>
+      </div>
+    </header>
+
+    <!-- LOGIN -->
+    <section id="loginView" class="card">
+      <h2>로그인</h2>
+      <div class="row">
+        <input id="loginId" class="input" placeholder="아이디" />
+        <input id="loginPw" class="input" type="password" placeholder="비밀번호" />
+        <button id="btnLogin" class="primary">로그인</button>
+      </div>
+      <p class="hint">예) bieung / 1234 · p67 / 1234 · 321 / 1234</p>
+    </section>
+
+    <!-- ADMIN -->
+    <section id="adminView" class="card" style="display:none;">
+      <div class="row space">
+        <div class="row">
+          <span class="pill">현재: <b id="whoText">-</b></span>
+          <span class="pill">권한: <b id="roleText">-</b></span>
+        </div>
+        <div class="row">
+          <button id="btnLogout">로그아웃</button>
+          <button id="btnSavePreview" class="primary">저장(프리뷰 반영)</button>
+          <button id="btnExportOrg" class="primary">조직 JSON 내보내기</button>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="steps">
+        <!-- STEP 1: TYPE -->
+        <div class="pane">
+          <div class="pane-head">
+            <h3>1) 유형</h3>
+            <button id="btnAddType" class="small-btn">+ 추가</button>
+          </div>
+
+          <div class="field">
+            <label class="muted">유형 선택</label>
+            <select id="typeSelect" class="select"></select>
+          </div>
+
+          <div class="field">
+            <label class="muted">유형 설명</label>
+            <input id="typeDesc" class="input" placeholder="예) 단속/증거 확보" />
+            <button id="btnSaveTypeDesc" class="primary">설명 저장</button>
+          </div>
+
+          <button id="btnDelType" class="danger w100">선택 유형 삭제</button>
+        </div>
+
+        <!-- STEP 2: CASE -->
+        <div class="pane">
+          <div class="pane-head">
+            <h3>2) 상황</h3>
+            <button id="btnAddCase" class="small-btn">+ 추가</button>
+          </div>
+
+          <div class="field">
+            <label class="muted">상황 선택</label>
+            <select id="caseSelect" class="select"></select>
+          </div>
+
+          <div class="field">
+            <label class="muted">상황 설명</label>
+            <input id="caseDesc" class="input" placeholder="예) 측정·기록·증거 보전 중심" />
+            <button id="btnSaveCaseDesc" class="primary">설명 저장</button>
+          </div>
+
+          <button id="btnDelCase" class="danger w100">선택 상황 삭제</button>
+        </div>
+
+        <!-- STEP 3: CATEGORY + ITEMS -->
+        <div class="pane">
+          <div class="pane-head">
+            <h3>3) 카테고리 & 항목</h3>
+          </div>
+
+          <div class="field">
+            <label class="muted">카테고리 선택</label>
+            <select id="catSelect" class="select"></select>
+          </div>
+
+          <div class="row">
+            <button id="btnAddCat" class="small-btn">+ 카테고리</button>
+            <button id="btnRenameCat" class="small-btn">이름 변경</button>
+            <button id="btnDelCat" class="danger small-btn">삭제</button>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="field">
+            <label class="muted">항목 여러 개 한 번에 추가</label>
+            <textarea id="bulkItems" class="textarea" placeholder="한 줄에 1개씩
+예)
+바디캠/녹화장비 | 저장공간 확인
+측정장비 | 배터리 확인
+증거물 봉투"></textarea>
+
+            <div class="hint">
+              형식: <b>항목명 | 메모</b> (메모는 선택)<br/>
+              구분자는 <b>|</b> 또는 <b>-</b>도 가능
+            </div>
+
+            <button id="btnAddBulk" class="primary w100">이 카테고리에 일괄 추가</button>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3 class="mini">현재 카테고리 항목</h3>
+          <div id="itemList" class="list"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="./admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+{
+  "ownerId": "dept-bieung",
+  "ownerName": "비응파출소",
+  "ownerType": "부서",
+  "version": "v1.0",
+  "publishedAt": "2025-12-13 12:00",
+  "publishedBy": "seed",
+  "types": {
+    "단속": {
+      "description": "단속/증거 확보",
+      "cases": {
+        "음주운항 단속": {
+          "description": "측정·기록·증거 보전 중심",
+          "categories": {
+            "개인장비": [
+              { "name": "제복/우의", "note": "" }
+            ],
+            "단속": [
+              { "name": "바디캠/녹화장비", "note": "저장공간 확인" },
+              { "name": "측정장비(부서기준)", "note": "배터리/작동 확인" },
+              { "name": "증거물 봉투", "note": "" }
+            ],
+            "문서": [
+              { "name": "필요 서식(업무별)", "note": "" },
+              { "name": "필기구", "note": "" }
+            ]
+          }
+        }
+      }
+    },
+    "구조": {
+      "description": "인명 구조/응급 대응",
+      "cases": {
+        "기본 구조": {
+          "description": "일반 구조 상황",
+          "categories": {
+            "개인장비": [
+              { "name": "장갑", "note": "작업용/보온" },
+              { "name": "헤드랜턴", "note": "야간 대비" }
+            ],
+            "구조장비": [
+              { "name": "로프", "note": "마모 확인" },
+              { "name": "구명부환", "note": "" }
+            ],
+            "응급": [
+              { "name": "응급처치 세트", "note": "재고 확인" }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
+

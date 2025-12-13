@@ -1,0 +1,142 @@
+:root { --muted:#a8b3cf; --text:#eef2ff; --accent:#6ea8fe; --danger:#ff6b6b; }
+*{ box-sizing:border-box; }
+body{ margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans KR",sans-serif; background:linear-gradient(180deg,#070a14,#0b1020 40%,#070a14); color:var(--text); }
+.wrap{ max-width: 1200px; margin:0 auto; padding:18px; }
+
+header{ display:flex; gap:12px; align-items:center; justify-content:space-between; padding:10px 0 16px; }
+.brand{ display:flex; gap:10px; align-items:center; }
+.logo{ width:36px; height:36px; border-radius:12px; background:radial-gradient(circle at 30% 30%, var(--accent), #2b65d9 70%); box-shadow:0 10px 30px rgba(110,168,254,.25); }
+.brand h1{ font-size:16px; margin:0; }
+.brand p{ margin:2px 0 0; font-size:12px; color:var(--muted); }
+.top-actions{ display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
+
+.card{
+  background:rgba(18,26,51,.86);
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:18px;
+  padding:14px;
+  box-shadow:0 12px 40px rgba(0,0,0,.25);
+}
+h2{ margin:0 0 10px; font-size:14px; }
+h3{ margin:0; font-size:13px; }
+h3.mini{ margin-top:6px; }
+
+.muted{ color:var(--muted); font-size:12px; }
+.hint{ font-size:12px; color:var(--muted); line-height:1.5; }
+.divider{ height:1px; background:rgba(255,255,255,.10); margin:12px 0; }
+
+.row{ display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+.row.space{ justify-content:space-between; }
+.w100{ width:100%; }
+
+button, input, select, textarea{ font:inherit; }
+button{
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.06);
+  color:var(--text);
+  padding:10px 12px;
+  border-radius:14px;
+  cursor:pointer;
+}
+button:hover{ background:rgba(255,255,255,.10); border-color:rgba(255,255,255,.18); }
+button.primary{ background:rgba(110,168,254,.18); border-color:rgba(110,168,254,.35); }
+button.danger{ background:rgba(255,107,107,.14); border-color:rgba(255,107,107,.35); }
+.small-btn{ padding:8px 10px; border-radius:12px; font-size:12px; }
+
+.input,.select,.textarea{
+  width:100%;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  color:var(--text);
+  outline:none;
+}
+.textarea{ min-height:120px; resize:vertical; }
+
+.pill{
+  display:inline-flex; gap:8px; align-items:center;
+  padding:8px 10px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.06);
+  color:var(--muted);
+  font-size:12px;
+}
+.pill b{ color:var(--text); font-weight:650; }
+
+.link-btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.06);
+  color:var(--text);
+  padding:10px 12px;
+  border-radius:14px;
+}
+
+.steps{
+  display:grid;
+  gap:12px;
+  grid-template-columns:1fr;
+}
+@media(min-width:980px){
+  .steps{ grid-template-columns: 1fr 1fr 1.4fr; }
+}
+.pane{
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.03);
+  border-radius:18px;
+  padding:12px;
+}
+.pane-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:10px;
+}
+.field{ display:grid; gap:8px; margin-bottom:10px; }
+
+.list{ display:grid; gap:10px; }
+.item-card{
+  padding:10px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.03);
+}
+.item-card b{ display:block; font-size:13px; margin-bottom:4px; }
+.item-card .small{ color:var(--muted); font-size:12px; }
+.item-card .actions{ display:flex; gap:8px; margin-top:8px; flex-wrap:wrap; }
+
+.toast{
+  position:fixed; left:50%; bottom:18px; transform:translateX(-50%);
+  background:rgba(0,0,0,.65);
+  border:1px solid rgba(255,255,255,.12);
+  color:var(--text);
+  padding:10px 12px;
+  border-radius:14px;
+  font-size:12px;
+  opacity:0; pointer-events:none;
+  transition:opacity .18s ease, transform .18s ease;
+  backdrop-filter:blur(10px);
+}
+.toast.show{ opacity:1; transform:translateX(-50%) translateY(-4px); }
+
+/* select 드롭다운 옵션 가독성 개선 */
+select {
+  color: #eef2ff;              /* 선택된 값 글씨 */
+  background-color: rgba(255,255,255,.06);
+}
+
+/* 드롭다운 펼쳤을 때 옵션 */
+select option {
+  background-color: #ffffff;   /* 옵션 배경: 흰색 */
+  color: #111111;              /* 옵션 글씨: 검정 */
+}
+
+/* 일부 브라우저 대응 */
+select:focus option {
+  background-color: #ffffff;
+  color: #111111;
+}
