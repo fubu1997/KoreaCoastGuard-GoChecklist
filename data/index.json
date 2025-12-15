@@ -1,8 +1,8 @@
 {
   "orgs": [
-    { "id": "dept-bieung", "name": "비응파출소", "orgType": "부서", "file": "latest-dept-bieung.json" },
-    { "id": "dept-haemang", "name": "해망파출소", "orgType": "부서", "file": "latest-dept-haemang.json" },
-    { "id": "dept-saemangeum", "name": "새만금파출소", "orgType": "부서", "file": "latest-dept-saemangeum.json" },
+    { "id": "dept-bieung", "name": "비응파출소", "orgType": "파출소", "file": "latest-dept-bieung.json" },
+    { "id": "dept-haemang", "name": "해망파출소", "orgType": "파출소", "file": "latest-dept-haemang.json" },
+    { "id": "dept-saemangeum", "name": "새만금파출소", "orgType": "파출소", "file": "latest-dept-saemangeum.json" },
 
     { "id": "p-67", "name": "P-67", "orgType": "P정", "file": "latest-p-67.json" },
     { "id": "p-69", "name": "P-69", "orgType": "P정", "file": "latest-p-69.json" },
